@@ -57,6 +57,7 @@ export function remarkKbd() {
 export const kbdMilkdownPlugins = [
   $remark("remarkKbd", () => remarkKbd as any),
   $markSchema("kbd", () => ({
+    inclusive: false,
     parseDOM: [{ tag: "kbd" }, { tag: "span[data-wechat-node='kbd']" }],
     toDOM: () => [
       "span",

@@ -60,6 +60,7 @@ export function remarkBadge() {
 export const badgeMilkdownPlugins = [
   $remark("remarkBadge", () => remarkBadge as any),
   $markSchema("badge", () => ({
+    inclusive: false,
     attrs: {
       type: { default: "brand" },
     },

@@ -50,3 +50,15 @@ test("Enter converts standalone component markers and keeps the cursor inside th
     }
   }
 });
+
+test("typing after an existing badge or key returns to normal text without adding a paragraph", async () => {
+  const { parse, schema } = await createArticleCodec();
+  for (const source of ["前文 [badge:brand|重点]", "按下 [[kbd:Cmd]]"]) {
+    const doc = parse(source);
+    let state = EditorState.create({ schema, doc, selection: TextSelection.atEnd(doc) });
+    state = state.apply(state.tr.insertText("继续正文"));
+    expect(state.doc.childCount).toBe(1);
+    expect(state.doc.lastChild!.lastChild!.text).toContain("继续正文");
+    expect(state.doc.lastChild!.lastChild!.marks.length).toBe(0);
+  }
+});
