@@ -1,0 +1,51 @@
+{
+  "name": "@akairos/milkdown-article-plugins",
+  "version": "0.1.5",
+  "description": "Shared Milkdown plugins for WeChat article publishing: highlight, callout, kbd, badge, and article structure cards (intro/cta)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aatrooox/milkdown-article-plugins.git"
+  },
+  "keywords": [
+    "milkdown",
+    "prosemirror",
+    "wechat",
+    "callout",
+    "badge",
+    "markdown-plugins"
+  ],
+  "peerDependencies": {
+    "@milkdown/kit": "^7.0.0"
+  },
+  "dependencies": {
+    "remark-highlight-mark": "^1.4.0"
+  },
+  "devDependencies": {
+    "@milkdown/kit": "^7.18.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "bun test"
+  }
+}
