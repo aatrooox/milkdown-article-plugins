@@ -244,7 +244,7 @@ export const builtinArticleCardsPlugin: WechatMarkdownPlugin = {
   border: 1px solid var(--wx-divider, #eae4e7);
 }
 .milkdown .editor .wechat-article-card-cta {
-  background-color: rgba(202, 96, 147, 0.04);
+  background-color: var(--brand-bg, rgba(202, 96, 147, 0.04));
   border: 1px dashed var(--wx-brand-accent, #ca6093);
   text-align: center;
 }
@@ -261,7 +261,7 @@ export const builtinArticleCardsPlugin: WechatMarkdownPlugin = {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 4px;
-  background-color: rgba(202, 96, 147, 0.08);
+  background-color: var(--brand-bg, rgba(202, 96, 147, 0.08));
   color: var(--wx-brand-accent, #ca6093);
   font-size: 11px;
   font-weight: 700;

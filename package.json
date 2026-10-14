@@ -1,6 +1,6 @@
 {
   "name": "@akairos/milkdown-article-plugins",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Shared Milkdown plugins for WeChat article publishing: highlight, callout, kbd, badge, and article structure cards (intro/cta)",
   "type": "module",
   "main": "./dist/index.js",
