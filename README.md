@@ -81,4 +81,4 @@ const docs = getPluginDocs();
 
 ## 许可证
 
-MIT © [Kairos](https://github.com/aatrooox)
+MIT © [Kairos](https://github.com/k7airos)
